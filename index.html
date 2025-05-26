@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css">
+    <title>title</title>
+</head>
+<body>
+    <div class="container">
+        <!-- heading -->
+        <h1> LEETCODE METRIC </h1>
+        <!-- user -->
+        <div class="user">
+            <p id="user-text">Enter UserName</p>
+            <div class="inputcontainer">
+                <div class="inputvalid">
+                    <input type="text" placeholder="Enter Here" id="user-input">
+                    <p id="input-status"></p>
+                </div>
+                <button id="search-btn">Search</button>
+            </div>
+            
+        </div>
+        <div class="roundedline"></div>
+        <!-- stats -->
+        <div class="stats">
+            <h1 id="username"></h1>
+            <div class="total">
+                    <div class="total-progress circle">
+                        <span id="total-span"></span>
+                        Total
+                    </div>
+                    <div class="total-card">
+                        <div>
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+            </div>
+            <!-- <div class="all">
+                <div class="progress-items">
+                    <div class="easy-progress circle">
+                        <span id="easy-span"></span>
+                        Easy
+                    </div>
+                </div>
+                <div class="card">
+
+                </div>
+            </div> -->
+            <div class="progress">
+
+                <div class="progress-items">
+                    <div class="easy-progress circle">
+                        <span id="easy-span"></span>
+                        Easy
+                    </div>
+                </div>
+                
+                <div class="progress-items">
+                    <div class="medium-progress circle">
+                        <span id="medium-span"></span>
+                        Medium
+                    </div>
+                </div>
+                <div class="progress-items">
+                    <div class="hard-progress circle">
+                        <span id="hard-span"></span>
+                        Hard
+                    </div>
+                </div>
+            </div>
+            <div class="stats-cards">
+
+            </div>
+         </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
