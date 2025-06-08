@@ -91,9 +91,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         finally {
             searchButton.textContent = "Search";
-            searchButton.disabled = false;
+            searchButton.disabled = true;
             searchText.disabled = false;
             searchText.value = "";
+            searchStatus.style.display = "none";
         }
 
     }
@@ -144,9 +145,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     <h4>${cardsData[0].label}</h4>
                     <p>${cardsData[0].value}</p>
                     </div>`;
-
-
-
         
     }
 
@@ -158,12 +156,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     searchText.addEventListener('input',function() {
         username = searchText.value;
+        searchStatus.style.display = "block";
         validateUsername(username);
         console.log(username);
     });
 
     searchButton.addEventListener('click',function() {
-        usernamedisplay.style.display = "block";    
+        usernamedisplay.style.display = "block";  
+        progress.style.display = "none";
+        cards.style.display = "none";
+        total.style.display = "none";
+    
+        usernamedisplay.textContent = "loading...."   
         fetchUsername(username);
            
     });
@@ -173,4 +177,6 @@ document.addEventListener("DOMContentLoaded", function() {
     cards.style.display = "none";
     total.style.display = "none";
     searchButton.disabled = true;
+
+    searchStatus.style.display = "none";
 })
